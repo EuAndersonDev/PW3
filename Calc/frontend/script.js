@@ -43,5 +43,45 @@ function calculate() {
         });
 }
 
+function calculateSquareRoot() {
+    if (!expression || isNaN(expression)) {
+        updateDisplay('Erro');
+        return;
+    }
+
+    fetch('http://localhost:3000/api/calculator/square-root', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ a: parseFloat(expression) }),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.result !== undefined) {
+                updateDisplay(data.result);
+                expression = data.result.toString();
+            } else {
+                updateDisplay('Erro');
+            }
+        })
+        .catch((error) => {
+            console.error('Erro:', error);
+            updateDisplay('Erro');
+        });
+}
+
+function calculatePercentage() {
+    if (!expression || isNaN(expression)) {
+        updateDisplay('Erro');
+        return;
+    }
+
+    const value = parseFloat(expression);
+    const result = value / 100;
+
+    updateDisplay(result);
+    expression = result.toString();
+}
 
 updateDisplay(expression);

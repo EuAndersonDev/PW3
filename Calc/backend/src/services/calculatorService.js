@@ -22,12 +22,9 @@ class CalculatorService {
         if (a < 0) {
             throw new Error("Square root of a negative number is not allowed.");
         }
-        return Math.sqrt(a);
+        return Math.sqrt(a); // Retorna 0 automaticamente se a = 0
     }
 
-    performPercentage(a, b) {
-        return (a * b) / 100;
-    }
 }
 
 module.exports = CalculatorService;

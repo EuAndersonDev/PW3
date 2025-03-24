@@ -1,4 +1,4 @@
-class CalculatorController {
+const CalculatorController = class {
     constructor(calculatorService) {
         this.calculatorService = calculatorService;
     }
@@ -39,12 +39,6 @@ class CalculatorController {
             res.status(400).json({ error: error.message });
         }
     }
+};
 
-    percentage(req, res) {
-        const { a, b } = req.body;
-        const result = this.calculatorService.performPercentage(a, b);
-        res.json({ result });
-    }
-}
-
-export default CalculatorController;
+module.exports = CalculatorController;
