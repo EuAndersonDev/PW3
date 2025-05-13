@@ -28,5 +28,6 @@ const calc = async (expressao) => {
 };
 
 module.exports = {
-  calc
+  calc,
+  Calcular
 };
