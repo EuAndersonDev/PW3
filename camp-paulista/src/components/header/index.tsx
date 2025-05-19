@@ -7,11 +7,10 @@ export function Header() {
         <nav>
           <ul>
             <li>
-              <a href="">Primeira fase</a>
-              <a href="">Segunda fase</a>
-              <a href="">Terceira fase</a>
-              <a href="">Quarta fase</a>
-              <a href="">Quinta fase</a>
+              <a href="">Fase de grupos</a>
+              <a href="">Quartas de Final</a>
+              <a href="">Semifinal</a>
+              <a href="">Final</a>
             </li>
           </ul>
         </nav>
