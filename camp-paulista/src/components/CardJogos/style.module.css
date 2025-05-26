@@ -46,16 +46,39 @@
 }
 
 .teams {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto 1fr;
   align-items: center;
-  justify-content: space-between;
   margin: 18px 0;
+  width: 100%;
+  gap: 0;
+  position: relative;
 }
 
 .team {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.teamName {
+  font-weight: bold;
+  font-size: 1.1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.teamNameLeft {
+  justify-self: start;
+  text-align: left;
+  padding-left: 0;
+}
+
+.teamNameRight {
+  justify-self: end;
+  text-align: right;
+  padding-right: 0;
 }
 
 .icon {
@@ -72,6 +95,7 @@
   color: blueviolet;
   min-width: 48px;
   text-align: center;
+  margin: 0 12px;
 }
 
 .footer {
@@ -92,7 +116,7 @@
   width: 32px;
   height: 32px;
   object-fit: contain;
-  margin: 0 8px;
+  margin: 0;
   background: #fff;
   border-radius: 50%;
   border: 1px solid #eee;

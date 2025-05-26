@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <h1 className={styles.titulo}>Grupo A</h1>
+      <h1 id="fase-de-grupos" className={styles.titulo}>Grupo A</h1>
       <Table grupo={faseDeGrupos.grupoA} />
       <h1 className={styles.titulo}>Grupo B</h1>
       <Table grupo={faseDeGrupos.grupoB} />
@@ -20,17 +20,13 @@ export default function Home() {
       <Table grupo={faseDeGrupos.grupoC} />
       <h1 className={styles.titulo}>Grupo D</h1>
       <Table grupo={faseDeGrupos.grupoD} />
-      <h1 className={styles.titulo}>Quartas</h1>
+      <h1 id="quartas" className={styles.titulo}>Quartas</h1>
       <CardJogos jogos={quartasFinal2025}></CardJogos>
-      <h1 className={styles.titulo}>Semifinais</h1>
+      <h1 id="semifinal" className={styles.titulo}>Semifinais</h1>
       <CardJogos jogos={semifinais2025}></CardJogos>
-      <h1 className={styles.titulo}>Final</h1>
+      <h1 id="final" className={styles.titulo}>Final</h1>
       <CardJogos jogos={final}></CardJogos>
-
       <Footer />
-
-      
     </div>
   );
-
 }

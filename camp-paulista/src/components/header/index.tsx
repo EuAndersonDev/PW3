@@ -7,10 +7,10 @@ export function Header() {
         <nav>
           <ul>
             <li>
-              <a href="">Fase de grupos</a>
-              <a href="">Quartas de Final</a>
-              <a href="">Semifinal</a>
-              <a href="">Final</a>
+              <a href="#fase-de-grupos">Fase de grupos</a>
+              <a href="#quartas">Quartas de Final</a>
+              <a href="#semifinal">Semifinal</a>
+              <a href="#final">Final</a>
             </li>
           </ul>
         </nav>

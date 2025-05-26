@@ -29,7 +29,7 @@ export function CardJogos({ jogos }: CardJogosProps) {
             </span>
           </div>
           <div className={styles.teams}>
-            <span>{jogo.mandante}</span>
+            <span className={`${styles.teamName} ${styles.teamNameLeft}`}>{jogo.mandante}</span>
             {jogo.escudoMandante ? (
               <img src={jogo.escudoMandante} alt={jogo.mandante} className={styles.escudo} />
             ) : (
@@ -41,7 +41,7 @@ export function CardJogos({ jogos }: CardJogosProps) {
             ) : (
               <div className={styles.icon}></div>
             )}
-            <span>{jogo.visitante}</span>
+            <span className={`${styles.teamName} ${styles.teamNameRight}`}>{jogo.visitante}</span>
           </div>
           <div className={styles.footer}>
             <span>{jogo.estadio}</span>
